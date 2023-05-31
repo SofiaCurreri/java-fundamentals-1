@@ -1,6 +1,7 @@
 package org.lessons.java;
 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 public class TrainTicket {
     public static void main(String[] args) {
         //il prezzo del biglietto è definito in base ai km (0.21 € al km)
@@ -29,6 +30,8 @@ public class TrainTicket {
             price = km * pricePerKm;
         }
 
-        System.out.print("Il costo del tuo biglietto è: " + price + "€");
+        DecimalFormat decimalFormat = new DecimalFormat("###,###.##");
+
+        System.out.print("Il costo del tuo biglietto è: " + decimalFormat.format(price) + "€");
     }
 }
